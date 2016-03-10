@@ -3,14 +3,13 @@ var ReactDOM = require("react-dom");
 
 var HelloWorld = React.createClass({
 	render: function () {
-		console.log(this.props);
 		return (
-			<div>Hello world tutorial!</div>
+			<div>Hello world {this.props.name}!</div>
 		)
 	}
 });
 
 ReactDOM.render(
-	<HelloWorld name="Oliver" anySortOfData={15} />,
+	<HelloWorld name="Oliver" />,
 	document.getElementById('app')
 );
